@@ -1,0 +1,9 @@
+
+select distinct name
+from SalesPerson
+where sales_id not in(
+    select sales_id 
+    from Orders join Company
+    on Orders.com_id = Company.com_id
+    where name="RED"
+);
