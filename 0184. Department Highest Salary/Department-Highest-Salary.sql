@@ -3,4 +3,4 @@ from Employee join Department on Employee.departmentId = Department.id
 where (departmentId, salary )in 
 (select departmentId, max(salary)
 from Employee
-group by departmentId);
+group by departmentId);  
